@@ -1,14 +1,5 @@
-import time
-import os
-import pandas
-
-while True:
-    if os.path.exists("temps_today.csv"):
-        data = pandas.read_csv("temps_today.csv")
-        print(data.mean())
-
-    else: 
-        print("File does not exist:")
-        
-    time.sleep(10)
-    
+print (1)
+int (9)
+int 9
+print (2)
+print 3
