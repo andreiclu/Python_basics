@@ -1,0 +1,20 @@
+Moon[[:space:]]sinking,[[:space:]]sun[[:space:]]rising.jpg filter=lfs diff=lfs merge=lfs -text
+resized_Galaxy_resized.jpg filter=lfs diff=lfs merge=lfs -text
+resized_galaxy2.jpg filter=lfs diff=lfs merge=lfs -text
+galaxy2.jpg filter=lfs diff=lfs merge=lfs -text
+resized_Moon[[:space:]]sinking,[[:space:]]sun[[:space:]]rising.jpg filter=lfs diff=lfs merge=lfs -text
+resized_kangaroos-rain-australia_71370_990x742.jpg filter=lfs diff=lfs merge=lfs -text
+resized_resized_Galaxy_resized.jpg filter=lfs diff=lfs merge=lfs -text
+resized_resized_Lighthouse.jpg filter=lfs diff=lfs merge=lfs -text
+resized_resized_kangaroos-rain-australia_71370_990x742.jpg filter=lfs diff=lfs merge=lfs -text
+kangaroos-rain-australia_71370_990x742.jpg filter=lfs diff=lfs merge=lfs -text
+resized_galaxy.jpg filter=lfs diff=lfs merge=lfs -text
+resized_resized_Moon[[:space:]]sinking,[[:space:]]sun[[:space:]]rising.jpg filter=lfs diff=lfs merge=lfs -text
+Galaxy_resized.jpg filter=lfs diff=lfs merge=lfs -text
+Lighthouse.jpg filter=lfs diff=lfs merge=lfs -text
+galaxy.jpg filter=lfs diff=lfs merge=lfs -text
+resized_Lighthouse.jpg filter=lfs diff=lfs merge=lfs -text
+resized_resized_galaxy.jpg filter=lfs diff=lfs merge=lfs -text
+resized_resized_galaxy2.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpg  filter=lfs diff=lfs merge=lfs -text
+ 
