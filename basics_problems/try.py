@@ -47,12 +47,75 @@
 #        print (i for i in range(1,int(a/2)))
 #    else:
 
+#
+# import pickle
+# import csv
+# import json
+#
+# def decorator(funct):
+#     def bla():
+#         funct()
+#     return bla
+#
+#
+# @decorator
+# def pickle_():
+#     with open('data.pickle', 'rb') as f:
+#         data = pickle.load(f)
+#     print(data)
+#
+# @decorator
+# def csv_():
+#     with open("employees.csv") as in_file:
+#         reader = csv.reader(in_file)
+#         for row in reader:
+#             print(row)
+#
+# @decorator
+# def json_():
+#     with open("example.json") as in_file:
+#         data = json.load(in_file)
+#
+#     print(data['dogs'])
 
 
+# context manager care
+
+# def func(a, b):
+# for i in range(a,b):
+# def func(a,b):
+#   result  = 0
+#   for i in range(a,b):
+#     result += i
+# with your_cm(start,stop) as ycm:
+# func(start,stop)
+from contextlib import contextmanager
 
 
-
-
+# import datetime
+#
+# class Timed:
+#
+#     def __enter__(self):
+#         self.start = datetime.datetime.now()
+#         return self
+#
+#     def __exit__(self, exc_type, exc_val, exc_tb):
+#         self.stop = datetime.datetime.now()
+#         print(self.stop-self.start)
+#         return self.stop-self.start
+#
+#
+# def func(a,b):
+#     result = 0
+#     for i in range(a,b):
+#         result += i
+#
+#
+# if __name__ == '__main__':
+#     with Timed() as td:
+#         print(func(10,20))
+#
 
 
 
