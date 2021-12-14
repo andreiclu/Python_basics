@@ -1,31 +1,4 @@
 
-#
-#
-
-# n = int(input("Give me a number to see what's n in S=1**4 + 2**4 + 3**4 + ... + n**4: "))
-#
-# def poli():
-#     rez = (n*(n+1)*(2*n+1)*3*n**2 + 3*(n-1))/30
-#     return rez
-#
-# print(poli())
-#
-#
-
-# x = input("Let's find out what are the divisors of a your reversed number: ")
-#
-# w = ""
-# for i in x:
-#     w = i + w
-# print ("The revered number is : ", w)
-#
-# result = []
-# for i in range(1, int(w//2) + 1):
-#         if int(w) % i == 0:
-#             result.append(i)
-# result.append(int(w))
-#
-# print(result)
 
 # lucky = int(input("Let's see if the number is lucky, that means n*n = any sum of consecutive numbers: "))
 #
@@ -79,7 +52,7 @@
 #     print(data['dogs'])
 
 
-# context manager care
+# context manager start, stop
 
 # def func(a, b):
 # for i in range(a,b):
@@ -92,8 +65,8 @@
 from contextlib import contextmanager
 
 
-# import datetime
-#
+import datetime
+
 # class Timed:
 #
 #     def __enter__(self):
@@ -106,16 +79,35 @@ from contextlib import contextmanager
 #         return self.stop-self.start
 #
 #
+#
 # def func(a,b):
 #     result = 0
 #     for i in range(a,b):
 #         result += i
 #
+# a=10
+# b=20
+# with Timed(a,b) as t:
+#     print(t)
+
+# x = [i/10 for i in range(11)]
 #
-# if __name__ == '__main__':
-#     with Timed() as td:
-#         print(func(10,20))
+# print(x)
 #
+#
+# [x. lower() for x in ["A","B","C"]] ['a', 'b', 'c']
+#
+# [x. upper() for x in ["a","b","c"]] ['A', 'B', 'C']
+# map(lambda x:x. lower(),["A","B","C"]) ['a', 'b', 'c']
+# map(lambda x:x. upper(),["a","b","c"]) ['A', 'B', 'C']
+
+from functools import reduce
+input_map = ['ala', 'bala', 'portocala', 'ion', 'pop', 'al', 'glanestasului']
+a = []
+print (list(map(lambda input_map:input_map.upper(),a)))
+
+
+print(list(filter(lambda x: x[0] in "aeiou", input_map)))
 
 
 

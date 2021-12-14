@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "ammount": 1500,
+    "accountId": 1,
+    "type": "depunere"
+  },
+  {
+    "id": 1,
+    "ammount": 2500,
+    "accountId": 2,
+    "type": "depunere"
+  },
+  {
+    "id": 2,
+    "ammount": 3000,
+    "accountId": 3,
+    "type": "depunere"
+  },
+  {
+    "id": 3,
+    "ammount": 200,
+    "accountId": 2,
+    "type": "retragere"
+  },
+  {
+    "id": 4,
+    "ammount": 150,
+    "accountId": 3,
+    "type": "retragere"
+  }
+]
