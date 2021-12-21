@@ -14,3 +14,4 @@ def remove_diacritics(string):
 
 
 print(remove_diacritics("aaadsdăâîșț"))
+

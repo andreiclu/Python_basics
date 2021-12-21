@@ -1,4 +1,5 @@
-# Se dau două şiruri, cu n, respectiv m, elemente, numere naturale. Primul şir este ordonat crescător, iar al doilea element este ordonat descrescător.
+# Se dau două şiruri, cu n, respectiv m, elemente, numere naturale.
+# Primul şir este ordonat crescător, iar al doilea element este ordonat descrescător.
 # Să se afişeze, în ordine crescătoare, valorile pare din cele două şiruri.
 
 

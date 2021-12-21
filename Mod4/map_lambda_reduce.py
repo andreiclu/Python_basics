@@ -10,7 +10,6 @@ f3 = lambda nr1, nr2: nr1 + nr2
 f3(5,6)
 
 
-
 l = [(2,6), (4,2), (6,16)]
 
 min(l)
@@ -30,11 +29,9 @@ f  = lambda el : el**2
 def func(el):
   return el**2
 
-
 list(map(lambda el : el**2, l2))
 help(map)
 # list(map(func, l2))
-
 
 
 l2 = (1,2,3,4,5,6)
@@ -49,3 +46,41 @@ reduce(lambda x, y: x + y, [1, 2, 3, 4, 5])
 
 reduce(f , [1, 2, 3, 4, 5])
 f(f( f(1,2) , 3), 4),5 )
+
+
+# un map care sa faca upper pe toate cuvintele din lista
+
+input_map = ["ala", "bala", "portocala", "ion", "pop", "al", "glanetasului"]
+
+# un filter care sa filtreze doar elementele care incep cu vocala
+# input_filter = lista rezultata la map
+# un reduce care sa cunstruiasca un cuvant dintr-o lista de litere
+input_reduce = ['a',
+ 'c',
+ 'e',
+ 's',
+ 't',
+ 'a',
+ 'e',
+ 's',
+ 't',
+ 'e',
+ 'i',
+ 'n',
+ 'p',
+ 'u',
+ 't',
+ 'u',
+ 'l']
+
+lista_mapata = list(map(lambda x: x.upper(), input_map))
+print(lista_mapata)
+
+lista_filtrata = filter(lambda arg: arg.startswith(("I", "A")), lista_mapata)
+print(list(lista_filtrata))
+
+from functools import reduce
+
+print(reduce(lambda x, y: x+y, input_reduce))
+
+

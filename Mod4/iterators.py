@@ -40,18 +40,19 @@
 
 class Fib:
     def __init__(self):
-        self.a = 1
         self.b = 1
+        self.c = 1
     def __iter__(self):
         return self
 
     def __next__(self):
+        self.c = self.b
         self.a = self.b
-        self.b = self.c
-        self.c = self.a;  + self.b
+        self.b = self.c + self.a
+        return self.c
 
 a = Fib()
-i = iter()
+i = iter(a)
 
 for k in range(20):
     print(next(i), end = ' ')
