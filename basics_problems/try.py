@@ -1,140 +1,4 @@
 
-
-# lucky = int(input("Let's see if the number is lucky, that means n*n = any sum of consecutive numbers: "))
-#
-# a = lucky ** 2
-# list_ = []
-
-# for i in range(0, a):
-#
-#     if i < a:
-#         list_.append(i)
-#         suma = suma + i
-#     elif i > a:
-#         i = 0 and list_.clear()
-#     else:
-#         print (list_)
-# sum_ = 0
-# while(sum_<=a):
-#    if sum(range(1, int(a/2))) == a:
-#        print (i for i in range(1,int(a/2)))
-#    else:
-
-#
-# import pickle
-# import csv
-# import json
-#
-# def decorator(funct):
-#     def bla():
-#         funct()
-#     return bla
-#
-#
-# @decorator
-# def pickle_():
-#     with open('data.pickle', 'rb') as f:
-#         data = pickle.load(f)
-#     print(data)
-#
-# @decorator
-# def csv_():
-#     with open("employees.csv") as in_file:
-#         reader = csv.reader(in_file)
-#         for row in reader:
-#             print(row)
-#
-# @decorator
-# def json_():
-#     with open("example.json") as in_file:
-#         data = json.load(in_file)
-#
-#     print(data['dogs'])
-
-
-# context manager start, stop
-
-# def func(a, b):
-# for i in range(a,b):
-# def func(a,b):
-#   result  = 0
-#   for i in range(a,b):
-#     result += i
-# with your_cm(start,stop) as ycm:
-# func(start,stop)
-from contextlib import contextmanager
-
-
-import datetime
-
-# class Timed:
-#
-#     def __enter__(self):
-#         self.start = datetime.datetime.now()
-#         return self
-#
-#     def __exit__(self, exc_type, exc_val, exc_tb):
-#         self.stop = datetime.datetime.now()
-#         print(self.stop-self.start)
-#         return self.stop-self.start
-#
-#
-#
-# def func(a,b):
-#     result = 0
-#     for i in range(a,b):
-#         result += i
-#
-# a=10
-# b=20
-# with Timed(a,b) as t:
-#     print(t)
-
-# x = [i/10 for i in range(11)]
-#
-# print(x)
-#
-
-
-# from math import sqrt
-# #
-# #
-# def is_prime(n):
-#     for i in range(2, int(sqrt(n)) + 1):
-#         if n % i == 0:
-#             return False
-#     return True
-#
-
-# def get_n_primes(n):
-#     primes = []
-#     i = 2
-#     while len(primes) != n:
-#         if is_prime(i):
-#             primes.append(i)
-#         i += 1
-#     return primes
-
-# print(get_n_primes(20))
-
-# class PrimeIterator:
-#     # Iterator that allows you to iterate over n primes
-#     def __init__(self, n):
-#         self.n = n
-#         self.generated_numbers = 0
-#         self.number = 1
-#
-#     def __iter__(self):
-#         return self
-#
-#     def __next__(self):
-#         self.number += 1
-#         if self.generated_numbers >= self.n:
-#             raise StopIteration
-#         elif is_prime(self.number):
-#             self.generated_numbers += 1
-#             return self.number
-#         return self.__next__()
 #
 #
 # iter = PrimeIterator(20)
@@ -171,5 +35,32 @@ import datetime
 #         if key == i:
 #             new_str = (re.sub(key, value, new_str))
 #             print(new_str)
+
+"""
+# Se citesc doua numere naturale a si b.
+# Afisati toate perechile de numere x si y din intervalul [a,b]
+# care au proprietatea ca sunt prime intre ele, dar x si y nu sunt numere prime (exemplu 14 si 25 sunt prime intre ele, dar nici 14 si nici 25 nu sunt numere prime).
+# """
+# from sympy import isprime
+# a = int(input("Insert where the interval starts: "))
+# b = int(input("Insert where the interval ends"))
+#
+# for x in range(a,b+1):
+#     for y in range(x+1,b+1):
+#         while(x!=y):
+#             if(x>y):
+#                 x = x-y
+#             else:
+#                 y = y-x
+#         prx = isprime(x)
+#         pry = isprime(y)
+#         if(x==1 and prx==False and pry==False):
+#             print((x,y))
+
+"""
+Se citeste un numar natural n si apoi n numere naturale. Afisati cate dintre ele au suma cifrelor egala cu numarul de lor de ordine de la citire.
+Exemplu: n=6 si numerele 122 101 34 555 23 123
+Se va afisa 3 deoarece numerele care respecta regula sunt 101 , 23 si 123.
+"""
 
 
