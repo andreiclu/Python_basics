@@ -61,6 +61,50 @@
 Se citeste un numar natural n si apoi n numere naturale. Afisati cate dintre ele au suma cifrelor egala cu numarul de lor de ordine de la citire.
 Exemplu: n=6 si numerele 122 101 34 555 23 123
 Se va afisa 3 deoarece numerele care respecta regula sunt 101 , 23 si 123.
-"""
+# """
+#
+# from timeit import timeit
+#
+# code = '''
+# from time import sleep
+# def method():
+#     sleep(1)
+#
+# method()
+#     '''
+#
+# print(timeit(code, number=2))
+
+# import re
+# sum = 0
+# pattern = 'back'
+# if re.match(pattern,'backup.txt'):
+#     sum+=1
+# if re.match(pattern,'text.back'):
+#     sum+=2
+# if re.match(pattern, 'backup.txt'):
+#     sum+=4
+# if re.search(pattern, 'text.back'):
+#     sum+=8
+# print(sum)
+#
+# param = (i*i for i in range(5))
+# print(type(param))
+# #
+
+
+#
+#
+
+
+
+
+
+
+
+
+
+
+
 
 
