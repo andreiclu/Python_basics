@@ -92,19 +92,3 @@ Se va afisa 3 deoarece numerele care respecta regula sunt 101 , 23 si 123.
 # print(type(param))
 # #
 
-
-#
-#
-
-
-
-
-
-
-
-
-
-
-
-
-
