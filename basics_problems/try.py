@@ -56,6 +56,7 @@
 #         pry = isprime(y)
 #         if(x==1 and prx==False and pry==False):
 #             print((x,y))
+from typing import List
 
 """
 Se citeste un numar natural n si apoi n numere naturale. Afisati cate dintre ele au suma cifrelor egala cu numarul de lor de ordine de la citire.
