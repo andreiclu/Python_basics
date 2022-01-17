@@ -44,3 +44,4 @@ def merge_sort(arr):
 
 arr_test = [2,4,5,64,5,6,6,7,5,0]
 print(merge_sort(arr_test))
+
