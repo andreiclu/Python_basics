@@ -19,24 +19,26 @@ without the “key” parameter (tip: implement methods __eq__ __gt__ and __ls__
 from operator import attrgetter
 
 class Car:
-    def __init__(self, make, model, year):
-        self.make = make
+    def __init__(self, brand, model, year):
+        self.brand = brand
         self.model = model
         self.year = year
 
     def __repr__(self):
         return self.__str__()
     def __str__(self):
-        return str.format("Make: {}, Model: {}, Year: {}", self.make, self.model, self.year)
-
-    def __lt__(self, other):
-        return (self.make, self.model, self.year) < (other.make, other.model, other.year)
-    def __gt__(self, other):
-        return (self.make, self.model, self.year) > (other.make, other.model, other.year)
-    def __eq__(self, other):
-        return (self.make, self.model, self.year) == (other.make, other.model, other.year)
+        return str.format("Brand: {}, Model: {}, Year: {}", self.brand, self.model, self.year)
 
 
+
+def merge_sort(car_list, left_index, right_index, comparison_function):
+    if left_index >= right_index:
+        return
+
+    middle = (left_index + right_index)//2
+    merge_sort(car_list, left_index, middle, comparison_function)
+    merge_sort(car_list, middle + 1, right_index, comparison_function)
+    merge(car_list, left_index, right_index, middle, comparison_function)
 
 
 
@@ -72,14 +74,6 @@ def merge(car_list, left_index, right_index, mid, compare_func):
         sorted_index = sorted_index + 1
 
 
-def merge_sort(car_list, left_index, right_index, comparison_function):
-    if left_index >= right_index:
-        return
-
-    middle = (left_index + right_index)//2
-    merge_sort(car_list, left_index, middle, comparison_function)
-    merge_sort(car_list, middle + 1, right_index, comparison_function)
-    merge(car_list, left_index, right_index, middle, comparison_function)
 
 def bubble_sort(car_list, comp_func):
     n = len(car_list)
@@ -115,7 +109,12 @@ for item in sorted_car_array:
     print(str(item))
 print("__________________________")
 
-sorted_by_method = sorted(car_array,key= attrgetter('make'))
+sorted_by_method = sorted(car_array,key= attrgetter('brand'))
+print("This one is sorted with lambda function: ")
+
+sorted_by_lamnda = sorted(car_array, key=lambda x: x.brand)
+print(sorted_by_lamnda)
+print("____________________________________")
 
 
 
@@ -123,20 +122,45 @@ print(f"This one is sorted by sorted method : {sorted_by_method}")
 
 
 class NewCar(Car):
+    sort_by = 'year'
+    def __init__(self, brand, model, year):
+        super().__init__(brand,model,year)
+
+
+
+
+
     def __lt__(self, other):
-        return (self.year, self.make) < (other.year, other.make)
+        if self.sort_by == 'year':
+            return self.year < other.year
+        else:
+            return self.model < other.model
     def __gt__(self, other):
-        return (self.year, self.make) > (other.year, other.make)
+        if self.sort_by == 'year':
+            return self.year > other.year
+        else:
+            return self.model > other.model
     def __eq__(self, other):
-        return (self.year, self.make) == (other.year, other.make)
+        if self.sort_by == 'year':
+            return self.year == other.year
+        else:
+            return self.model == other.model
 
 
-car1 = NewCar("Alfa Romeo", "33 SportWagon", 1988)
-car2 = NewCar("Chevrolet", "Cruze Hatchback", 2011)
-car3 = NewCar("Corvette", "C6 Couple", 2004)
-car4 = NewCar("Lincoln", "Navigator SUV", 2015)
-car5 = NewCar("Cadillac", "Seville Sedan", 1995)
-car6 = NewCar("Boalfa Romeo", "33 SportWagon", 1988)
-car_array = [car1,car2, car3, car4, car5, car6]
 
-print(sorted(car_array))
+child_car1 = NewCar("Skoda", "Octavia", 2015)
+child_car2 = NewCar("Lancia", "Musa", 2011)
+child_car3 = NewCar("Kia", "Cee’d", 2013)
+child_array = [child_car1, child_car2, child_car3]
+print("___________________________")
+print("This list of objects is sorted by year:")
+print(sorted(child_array))
+
+print("This list of objects is sorted by model: ")
+NewCar.sort_by = 'model'
+print(sorted(child_array))
+
+
+
+
+

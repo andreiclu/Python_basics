@@ -20,4 +20,4 @@ def selection_sort(list_a):
 print(selection_sort([7,8,9,8,7,6,5,6,7,8,9,0]))
 
 #Complexity O(n^2)
-# O(1)
+# O(1) Memory complexity

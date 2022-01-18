@@ -6,6 +6,8 @@
 #Solution are combined to solve original problem
 
 #Complexity: O(n*lon(n) running time
+#Memory complexity: O(n)
+
 
 #1. Split de array in half
 #2. Call Merge Sort on each half to sort them recursively

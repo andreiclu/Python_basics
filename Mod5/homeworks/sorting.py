@@ -30,7 +30,7 @@ def write_elem_recursive(filename, list_a):
 
 
 
-new_list = [1, 454, 3, 2, 3, 4, 5, 6, 77, 5, 3, 22]
+new_list = [1,2,4,6,8]
 
 write_elem_iterative("iterative", new_list)
 write_elem_recursive("recursive", new_list)
