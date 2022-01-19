@@ -9,6 +9,7 @@ def sum_iter(x):
         sum = sum + i
     return sum
 
+
 print(sum_iter([1,2,4,5,6,7,8]))
 
 def sum_rec(x):
@@ -18,4 +19,18 @@ def sum_rec(x):
         return x[0] + sum_rec(x[1:])
 
 print(sum_rec([1,2,4,5,6,7,8]))
+
+
+
+def sum_pop(x):
+    new = x.pop
+    if len(x) == 0:
+        return 0
+    else:
+        return new + x
+
+print(sum_rec([1,2,4,5,6,7,8]))
+
+
+
 

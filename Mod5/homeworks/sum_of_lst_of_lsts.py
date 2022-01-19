@@ -4,12 +4,15 @@
 
 new_lst = []
 def get_all_as_lst(a):
+    # s=0
     for i in a:
         if isinstance(i,list):
             for j in i:
                 new_lst.append(j)
+                # s+=j
         else:
             new_lst.append(i)
+            #s+=i
     return new_lst
 
 def sum_iter(x):
@@ -40,3 +43,8 @@ def sum_rec(x):
     return sum
 a = [1, 2, [3, 4], [5, 6]]
 print(sum_rec(a))
+
+
+
+
+
