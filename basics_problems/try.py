@@ -1,20 +1,20 @@
 
 # import re
-x = input("Insert a text:")
-
-dict = {
-    "COLEGIUL": "Co.",
-    "LICEUL": "Li.",
-    "NATIONAL": "Nat.",
-    "TEORETIC": "Tr."
-}
-a = []
-x = x.split()
-for i in dict.values():
-    if i in x:
-        a.append(dict.keys())
-print(a)
-
+# x = input("Insert a text:")
+#
+# dict = {
+#     "COLEGIUL": "Co.",
+#     "LICEUL": "Li.",
+#     "NATIONAL": "Nat.",
+#     "TEORETIC": "Tr."
+# }
+# a = []
+# x = x.split()
+# for i in dict.values():
+#     if i in x:
+#         a.append(dict.keys())
+# print(a)
+#
 
 
 # my_set = ('COLEGIUL', 'LICEUL', 'NATIONAL', 'TEORETIC')
