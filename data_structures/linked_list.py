@@ -73,5 +73,3 @@ my_linked_list.extend(new_linked_list)
 print(my_linked_list)
 
 
-# (2.prev).next = 2.next
-# (2.next).prev = 1
