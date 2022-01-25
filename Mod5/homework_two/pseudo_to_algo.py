@@ -1,37 +1,37 @@
 
 
 
-
-def dec_to_bin(d):
-    binary_str = ''
-    while d>0:
-        r = d % 2
-        if r == 1:
-            binary_str = '1' + binary_str
-            d = d//2
-        else:
-            binary_str = '0' + binary_str
-            d = d//2
-    return binary_str
-
-
-print(dec_to_bin(112))
-
-
-
-
-
-
-
-def GCD(a,b):
-    while a!=b:
-        if a>b:
-            a = a-b
-        else:
-            b = b-a
-    return a
-
-print(GCD(120,44))
+#
+# def dec_to_bin(d):
+#     binary_str = ''
+#     while d>0:
+#         r = d % 2
+#         if r == 1:
+#             binary_str = '1' + binary_str
+#             d = d//2
+#         else:
+#             binary_str = '0' + binary_str
+#             d = d//2
+#     return binary_str
+#
+#
+# print(dec_to_bin(112))
+#
+#
+#
+#
+#
+#
+#
+# def GCD(a,b):
+#     while a!=b:
+#         if a>b:
+#             a = a-b
+#         else:
+#             b = b-a
+#     return a
+#
+# print(GCD(120,44))
 
 
 """
@@ -82,22 +82,22 @@ else
 print 'no grades were entered'
 """
 
-# def cls_avg_sent():
-#     total = 0
-#     counter = 0
-#     grade = int(input("Enter the first grade: "))
-#     while grade!=-1:
-#         total += grade
-#         counter += 1
-#         grade = int(input("Enter grade, -1 to end: "))
-#     if counter !=0:
-#         avg = float(total/counter)
-#         return avg
-#     else:
-#         print("No grades were entered: ")
-#
-# print(cls_avg_sent())
-#
+def cls_avg_sent():
+    total = 0
+    counter = 0
+    grade = int(input("Enter the first grade: "))
+    while grade!=-1:
+        total += grade
+        counter += 1
+        grade = int(input("Enter grade, -1 to end: "))
+    if counter !=0:
+        avg = float(total/counter)
+        return avg
+    else:
+        return "No grades were entered! "
+
+print(cls_avg_sent())
+#-
 
 """
 initialize passes to zero
@@ -137,7 +137,7 @@ print "raise tuition"
 #             failures +=1
 #         student += 1
 #     print(f'Passes:{passes}, Failures:{failures}')
-#     if passes > 8:
+#     if passes >= 8:
 #         print("Raise tuition")
 #
 # (exam_rez())

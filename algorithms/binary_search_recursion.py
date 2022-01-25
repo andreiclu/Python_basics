@@ -14,5 +14,5 @@ def binary_search(data,low, high, item):
 
 numbers = [3,5,6,7,8,9,12,15,23,155]
 
-print(binary_search(numbers, 0, len(numbers)-1, 15))
+print(binary_search(numbers, 0, len(numbers)-1, 12))
 
