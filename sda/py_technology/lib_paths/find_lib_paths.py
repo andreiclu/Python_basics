@@ -10,7 +10,7 @@ import module_a_pack as m_a_p
 print(m_a_p.test)
 
 # mai indicat este sa ne folosim de path-uri relative fata de file-ul nostru
-sys.path.append("..\\pack1")
+sys.path.append("../pack1")
 import module_a_pack as m_a_p_rel
 print(m_a_p_rel.test)
 

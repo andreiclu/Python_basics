@@ -60,3 +60,20 @@ smallest_transform(33338) ➞ 5
 smallest_transform(7777) ➞ 0
 """
 
+class B:
+    def x(self):
+        print('x: B')
+
+
+class C:
+    def x(self):
+        print('x: C')
+
+
+class D(B, C):
+    pass
+
+
+d = D()
+d.x()
+print(D.mro())

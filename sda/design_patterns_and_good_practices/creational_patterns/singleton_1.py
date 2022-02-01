@@ -31,3 +31,4 @@ if __name__ == "__main__":
 
     obj_1 = Singleton("obj_1")
     obj_1.name = "obj_2"
+
