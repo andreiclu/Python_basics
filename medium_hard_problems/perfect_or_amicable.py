@@ -30,17 +30,17 @@ def get_div(x):
 def num_type(n):
     y = sum(get_div(n))
     if sum(get_div(n)) == n:
-        print("Perfect")
+        return "Perfect"
     elif sum(get_div(y)) == n:
-        print("Amicable")
+        return "Amicable"
     else:
-        print("Neither")
+        return "Neither"
 
 
 
 
-num_type(6)
-num_type(2924)
-num_type(5010)
-
+print(num_type(6))
+print(num_type(2924))
+print(num_type(5010))
+print(num_type(5566))
 
