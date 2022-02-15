@@ -19,3 +19,25 @@ numbers_need_friends_too(33) ➞ 33
 
 
 def numbers_need_friends_too(n):
+    st = str(n)
+    groups = []
+    current = ''
+
+    for i in st:
+        if i in current or current =='':
+            current+=i
+        else:
+            groups.append(current)
+            current = i
+    if current!='':
+        groups.append(current)
+
+    for i in range(len(groups)):
+        if len(groups[i])==1:
+            groups[i] = groups[i].replace(groups[i][0], groups[i][0]*3,1)
+    return int(''.join(groups))
+
+
+print(numbers_need_friends_too(56657))
+
+print(numbers_need_friends_too(123))
