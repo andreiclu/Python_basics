@@ -23,3 +23,8 @@ a = [2,1,55,4,3,3,1,5,76,22]
 i = len(a)
 
 print(insertion_recurisve(a,i))
+
+
+
+
+

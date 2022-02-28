@@ -1,6 +1,8 @@
 
 
-
+"""
+Recursive Bubble_sort algorithm
+"""
 
 def bubble_sort_recur(a, i, j, n):
     if j == n:
@@ -12,14 +14,19 @@ def bubble_sort_recur(a, i, j, n):
         temp = a[j]
         a[j] = a[i]
         a[i] = temp
-        bubble_sort_recur(a, i, j+1, n);
+        bubble_sort_recur(a, i, j+1, n)
     else:
-        bubble_sort_recur(a, i, j + 1, n);
+        bubble_sort_recur(a, i, j + 1, n)
     return a
 
 
 mylist = [64,34,24,12,22,11,90]
 
 print(bubble_sort_recur(mylist,0,0,len(mylist)))
+
+
+
+mylsit = [64,34,24,12,22,11,90]
+
 
 

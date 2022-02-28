@@ -17,3 +17,6 @@ def insertion_sort(list_a):
 
 
 print(insertion_sort([7,45,765,5,454,33,44,3,3,43]))
+
+
+

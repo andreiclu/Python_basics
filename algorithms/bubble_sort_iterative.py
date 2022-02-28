@@ -37,12 +37,47 @@ def bubble_sort(arr):
     return arr
 
 
-
 # Driver code to test above
 arr = [64, 34, 25, 12, 22, 11, 90]
 
 
 print(bubble_sort(arr))
+
+
+def bubble_s(arr):
+    for i in range(0,len(arr)-1):
+        for j in range(0, len(arr)-1):
+            if arr[j]>arr[j+1]:
+                arr[j],arr[j+1]=arr[j+1],arr[j]
+
+
+    return arr
+
+ar = [64, 34, 25, 12, 22, 11, 90,100]
+
+print(bubble_s(ar))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

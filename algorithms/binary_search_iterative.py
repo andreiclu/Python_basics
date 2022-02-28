@@ -25,3 +25,14 @@ print(binary_search(seq_a,item_a))
 
 # n * 1/2 * 1/2 *...* 1/2 = n/2^k
 # k = log2n sau O(log(n))
+
+
+
+
+
+
+
+
+
+
+
