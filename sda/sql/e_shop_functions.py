@@ -1,6 +1,7 @@
 import pymysql
 
 
+
 def cart_detail_command(cart_id):
     read_cart = f"select carts.id, carts.user_id, carts.status, cart_items.quantity, cart_items.product_id from carts join cart_items where carts.id = {cart_id}"
     return read_cart
