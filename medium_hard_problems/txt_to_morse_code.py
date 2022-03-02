@@ -27,3 +27,19 @@ def encode_morse(txt):
 
 
 print(encode_morse("This is a test code"))
+
+
+def decode_morse(txt):
+    rez = ''
+    txt = txt.split(' ')
+
+    for dot_bar in txt:
+        if dot_bar == '':
+            rez+= ' '
+        for key, encoded_value in char_to_dots.items():
+            if dot_bar == encoded_value:
+                rez+=key
+    return rez.replace("  ", ' ')
+
+
+print(decode_morse("-.-. .... .- .-.. .-.. . -. --. ."))

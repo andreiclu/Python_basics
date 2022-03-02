@@ -2,6 +2,8 @@ from sqlalchemy import *
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
+from sda.sql.sessionm import session
+
 Base = declarative_base()
 
 
@@ -87,3 +89,23 @@ host = '127.0.0.1'
 db = 'sqlalchemy_demo'
 eng = create_engine(f"mysql+pymysql://{user}:{password}@{host}/{db}")
 Base.metadata.create_all(eng)
+
+
+
+def add_product():
+    pr_1 = Product('HP', 1, 1400, 15)
+    pr_2 = Product('Dell', 1, 1700, 10)
+    session.add_all([pr_1, pr_2])
+    session.commit()
+
+
+def show_products():
+    products = session.query(Product).all()
+    print(products)
+
+
+if __name__ == '__main__':
+    add_product()
+    show_products()
+
+    

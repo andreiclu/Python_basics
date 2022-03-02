@@ -21,7 +21,15 @@ check([7, 9, 11, 12, 5]) ➞ "YES"
 
 
 def check(lst):
-
     slst = sorted(lst)
+    if slst == lst:
+        return 'NO'
+    for i in range(1, len(lst) - 1):
+        if lst == slst[i:] + slst[:i]:
+            return "YES"
+    return "NO"
 
-    
+
+print(check([7, 9, 11, 12, 5]))
+
+print(check([3, 4, 5, 1, 2]))
