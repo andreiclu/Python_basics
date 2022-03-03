@@ -16,7 +16,7 @@ with pymysql.connect(host="localhost", password='Fcsbnuesteaua8532', database='c
     foreign key(photo_id) references photos(id)
     )"""
     if __name__ == '__main__':
-        with pymysql.connect(host="127.0.0.1", user="root", password=password.password) as connection:
+        with pymysql.connect(host="localhost", password='Fcsbnuesteaua8532', database='car_rental_agency') as connection:
             print("connected!")
 
             with connection.cursor() as cursor:

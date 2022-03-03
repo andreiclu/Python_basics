@@ -1,12 +1,11 @@
 from sqlalchemy import *
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker
 
 from sda.sql.sessionm import session
 
 Base = declarative_base()
-
-
 class Category(Base):
     __tablename__ = 'categories'
     id = Column(Integer, primary_key=True, autoincrement=True)
@@ -83,14 +82,6 @@ class CartItem(Base):
         return str(self)
 
 
-user = 'root'
-password = 'Fcsbnuesteaua8532'
-host = '127.0.0.1'
-db = 'sqlalchemy_demo'
-eng = create_engine(f"mysql+pymysql://{user}:{password}@{host}/{db}")
-Base.metadata.create_all(eng)
-
-
 
 def add_product():
     pr_1 = Product('HP', 1, 1400, 15)
@@ -103,9 +94,18 @@ def show_products():
     products = session.query(Product).all()
     print(products)
 
+def cart_value(cart_id):
+    cart_items = session.query(CartItem).filter(CartItem.cart_id == cart_id).all()
+    suma = 0
+    for cart_item in cart_items:
+        product = session.query(Product).filter(Product.id == cart_item.product_id).all()[0]
+        suma = suma + cart_item.quantity * product.price
+
+    return suma
+
 
 if __name__ == '__main__':
-    add_product()
-    show_products()
+    # add_product()
+    # show_products()
+    suma = cart_value(2)
 
-    

@@ -35,8 +35,7 @@ def cart_total(connection, cart_id):
         total = manipulate_cart_data(cursor, cart_data)
         return total
 if __name__ == '__main__':
-
-    with pymysql.connect(host="127.0.0.1", user="root", password=password.password) as connection:
+    with pymysql.connect(host="localhost", password='Fcsbnuesteaua8532', database='car_rental_agency') as connection:
         print("connected!")
 
         open_database = "use e_shop"
