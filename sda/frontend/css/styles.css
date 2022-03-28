@@ -1,0 +1,27 @@
+h2{
+    color: rgb(226, 43, 43);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+article{
+    background-color: seashell;
+    align-content: center;
+    color: maroon
+
+
+
+}
+article h3{
+    color:green;
+    width: 500px;
+    text-align: center;
+    border: 1px solid red;
+    padding: 25px;
+    margin: 25px;
+    display:inline-block;
+    vertical-align: top;
+}
+
+article img{
+    border-radius: 25%;
+}

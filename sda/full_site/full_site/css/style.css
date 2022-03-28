@@ -1,0 +1,35 @@
+h1 {
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#titlu_prima_pagina {
+    color: blue;
+    text-align: center;
+}
+
+
+.rosu_centrat {
+    color: red;
+    text-align: center;
+}
+
+article h2 {
+    color: indigo;
+}
+
+article>p {
+    color: darkgreen;
+    text-align: justify;
+}
+
+/* COMENTARIU */
+
+article{
+    background-color: beige;
+    width: 50%;
+}
+
+article img {
+    width: 100%;
+}
